@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "317087152711",
+    "project_id": "citytell",
+    "storage_bucket": "citytell.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:317087152711:android:c0e14d342a8a646d550f62",
+        "android_client_info": {
+          "package_name": "com.tello.tello"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "317087152711-rk31pan42t20tuj35ud0mvjbl7gqgv0i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLTFdlhozTTXS7aKS1DY5zrQqGG6eZov0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "317087152711-rk31pan42t20tuj35ud0mvjbl7gqgv0i.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "317087152711-f1ue4as6d33jca9j8l36in9ds7qr3jmu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ios.tello"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
