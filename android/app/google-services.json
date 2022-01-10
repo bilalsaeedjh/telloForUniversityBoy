@@ -14,6 +14,22 @@
       },
       "oauth_client": [
         {
+          "client_id": "317087152711-lcfhpr1mpc82cbqc1h8m1edma69tbcon.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tello.tello",
+            "certificate_hash": "1e305e1b8f356c7a960e787056da2993ae039665"
+          }
+        },
+        {
+          "client_id": "317087152711-r4sivmq14crf25mbecbad8origg1npor.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tello.tello",
+            "certificate_hash": "dc3590ee16c674f31b143920c3dfda77b42a163a"
+          }
+        },
+        {
           "client_id": "317087152711-rk31pan42t20tuj35ud0mvjbl7gqgv0i.apps.googleusercontent.com",
           "client_type": 3
         }

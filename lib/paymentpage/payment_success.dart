@@ -95,8 +95,8 @@ class PaymentSuccessPageState extends State<PaymentSuccessPage> {
                   trailing: Text("11:00 AM"),
                 ),
                 ListTile(
-                  title: Text("Ashwin Bicholiya"),
-                  subtitle: Text("ashwinbicoliya@gmail.com"),
+                  title: Text("Bilal Saeed"),
+                  subtitle: Text("bilalsaeed@gmail.com"),
                   trailing: CircleAvatar(
                     radius: 20.0,
                     backgroundImage: NetworkImage(
@@ -105,7 +105,7 @@ class PaymentSuccessPageState extends State<PaymentSuccessPage> {
                 ),
                 ListTile(
                   title: Text("Amount"),
-                  subtitle: Text("\₹40"),
+                  subtitle: Text("Rs40"),
                   trailing: Text("Completed"),
                 ),
                 Card(

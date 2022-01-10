@@ -1,4 +1,3 @@
-/*
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
@@ -9,9 +8,9 @@ import 'package:tello/widgets/profile_tile.dart';
 
 class CreditCardPage extends StatelessWidget {
   BuildContext? _context;
-  MaskeTextnputController ccMask =
-      MaskedTextController(mask: "0000 0000 0000 0000");
-  MaskedTextController expMask = MaskedTextController(mask: "00/00");
+ /* var ccMask =
+      MaskTextInputFormatter(mask: "0000 0000 0000 0000");
+  var expMask = MaskTextInputFormatter(mask: "00/00",initialText: '24/123');*/
   Widget bodyData() => SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -26,7 +25,7 @@ class CreditCardPage extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.fromLTRB(1, 10, 35, 15),
                     child: GestureDetector(
-                      child: Icon(
+                      child: const Icon(
                         CupertinoIcons.back,
                         size: 38,
                       ),
@@ -35,7 +34,7 @@ class CreditCardPage extends StatelessWidget {
                       },
                     ),
                   ),
-                  Text(
+                  const Text(
                     'Debit/Credit card',
                     style: TextStyle(
                         fontFamily: 'Raleway',
@@ -85,14 +84,13 @@ class CreditCardPage extends StatelessWidget {
                   color: Colors.black,
                 ),
               ),
-             */
-/* Positioned(
+ Positioned(
                 right: 10.0,
                 bottom: 10.0,
                 child: StreamBuilder<String>(
                   initialData: "Your Name",
                   builder: (context, snapshot) => Text(
-                    snapshot.data!.length > 0 ? snapshot.data : "Your Name",
+                    snapshot.data!.length.toString().isNotEmpty ? snapshot.data! : "Your Name",
                     style: const TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
@@ -100,7 +98,7 @@ class CreditCardPage extends StatelessWidget {
                         fontSize: 20.0),
                   ),
                 ),
-              ),*//*
+              ),
 
             ],
           ),
@@ -118,14 +116,14 @@ class CreditCardPage extends StatelessWidget {
             StreamBuilder<String>(
                 initialData: "**** **** **** ****",
                 builder: (context, snapshot) {
-                  snapshot.data!.isNotEmpty
-                      ? ccMask.updateText(snapshot.data)
-                      : null;
-                  return Text(
-                    snapshot.data!.isNotEmpty
+                  /*snapshot.data!.isNotEmpty
+                      ? ccMask.updateMask(mask: snapshot.data)
+                      : null;*/
+                  return const Text(
+                    /*snapshot.data!.isNotEmpty
                         ? snapshot.data!
-                        : "**** **** **** ****",
-                    style: const TextStyle(
+                        :*/ "**** **** **** ****",
+                    style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
                         fontSize: 22.0),
@@ -137,14 +135,14 @@ class CreditCardPage extends StatelessWidget {
                 StreamBuilder<String>(
                     initialData: "MM/YY",
                     builder: (context, snapshot) {
-                      snapshot.data!.length.toString().isNotEmpty
-                          ? expMask.updateText(snapshot.data)
-                          : null;
+                     /* snapshot.data!.length.toString().isNotEmpty
+                          ? expMask.updateMask(mask: snapshot.data)
+                          : null;*/
                       return ProfileTile(
                         textColor: Colors.black,
                         title: "Expiry",
                         subtitle:
-                            snapshot.data!.length.toString().isNotEmpty? snapshot.data : "MM/YY",
+                           /* snapshot.data!.length.toString().isNotEmpty? snapshot.data : */"MM/YY",
                       );
                     }),
                 const SizedBox(
@@ -170,28 +168,30 @@ class CreditCardPage extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             TextField(
-              controller: ccMask,
+              controller: TextEditingController(),
+              //inputFormatters: [ccMask],
               keyboardType: TextInputType.number,
               maxLength: 19,
-              style: TextStyle(fontFamily: 'Raleway', color: Colors.black),
-              decoration: InputDecoration(
+              style: const TextStyle(fontFamily: 'Raleway', color: Colors.black),
+              decoration: const InputDecoration(
                   labelText: "Credit Card Number",
                   labelStyle: TextStyle(fontWeight: FontWeight.bold),
                   border: OutlineInputBorder()),
             ),
             TextField(
-              controller: expMask,
+              //inputFormatters: [expMask],
+              controller: TextEditingController(),
               keyboardType: TextInputType.number,
               maxLength: 5,
-              style: TextStyle(fontFamily: 'Raleway', color: Colors.black),
-              decoration: InputDecoration(
+              style: const TextStyle(fontFamily: 'Raleway', color: Colors.black),
+              decoration: const InputDecoration(
                   labelStyle: TextStyle(
                     fontWeight: FontWeight.bold,
                   ),
                   labelText: "MM/YY",
                   border: OutlineInputBorder()),
             ),
-            TextField(
+            const TextField(
               keyboardType: TextInputType.number,
               maxLength: 3,
               style: TextStyle(fontFamily: 'Raleway', color: Colors.black),
@@ -200,7 +200,7 @@ class CreditCardPage extends StatelessWidget {
                   labelText: "CVV",
                   border: OutlineInputBorder()),
             ),
-            TextField(
+            const TextField(
               keyboardType: TextInputType.text,
               maxLength: 20,
               style: TextStyle(fontFamily: 'Raleway', color: Colors.black),
@@ -215,7 +215,7 @@ class CreditCardPage extends StatelessWidget {
         ),
       );
   Widget floatingBar() => Ink(
-        decoration: ShapeDecoration(
+        decoration: const ShapeDecoration(
           shape: StadiumBorder(),
         ),
         child: FloatingActionButton.extended(
@@ -224,11 +224,11 @@ class CreditCardPage extends StatelessWidget {
                         builder: (BuildContext context) => PaymentSuccessPage()));
           },
           backgroundColor: Themes.color,
-          icon: Icon(
+          icon: const Icon(
             FontAwesomeIcons.amazonPay,
             color: Colors.black,
           ),
-          label: Text(
+          label: const Text(
             "Continue",
             style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
           ),
@@ -246,4 +246,3 @@ class CreditCardPage extends StatelessWidget {
     );
   }
 }
-*/

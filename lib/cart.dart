@@ -79,9 +79,8 @@ class BottomBar extends StatelessWidget {
               ),
             ),
             onTap: () {
-              debugPrint("Going to payment Page");
-               /*Navigator.of(context).pushReplacement(MaterialPageRoute(
-                        builder: (BuildContext context) => PaymentPage()));*/
+               Navigator.of(context).pushReplacement(MaterialPageRoute(
+                        builder: (BuildContext context) => PaymentPage()));
             },
           ),
         ],
@@ -115,13 +114,13 @@ Container totalAmount(List<FoodItem> foodItems) {
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
-        Text(
+        const Text(
           "Total:",
           style: TextStyle(fontSize: 25, fontWeight: FontWeight.w300),
         ),
         Text(
-          "\₹${returnTotalAmount(foodItems)}",
-          style: TextStyle(fontWeight: FontWeight.w700, fontSize: 28),
+          "Rs${returnTotalAmount(foodItems)}",
+          style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 28),
         ),
       ],
     ),
@@ -391,7 +390,7 @@ class ItemContent extends StatelessWidget {
                 ]),
           ),
           Text(
-            "\₹${foodItem.quantity * foodItem.price}",
+            "Rs${foodItem.quantity * foodItem.price}",
             style:
                 TextStyle(color: Colors.grey[500], fontWeight: FontWeight.w400),
           ),

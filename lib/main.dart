@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
         Bloc((i) => ColorBloc()),
       ],
       child: MaterialApp(
-          title: "Food Tukk",
+          title: "Tello",
           home: FirstPage(),
           debugShowCheckedModeBanner: false,
           routes: <String, WidgetBuilder>{
@@ -325,7 +325,7 @@ class Items extends StatelessWidget {
                                     fontSize: 18,
                                   )),
                             ),
-                            Text("\₹$itemPrice",
+                            Text("Rs$itemPrice",
                                 style: TextStyle(
                                   fontWeight: FontWeight.w700,
                                   fontSize: 18,
@@ -463,16 +463,16 @@ Widget title() {
       SizedBox(width: 45),
       Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
+        children: const <Widget>[
           Text(
-            "Food",
+            "Tello",
             style: TextStyle(
               fontWeight: FontWeight.w700,
               fontSize: 30,
             ),
           ),
           Text(
-            "Tukk",
+            "Vehari",
             style: TextStyle(
               fontWeight: FontWeight.w200,
               fontSize: 30,
@@ -489,11 +489,11 @@ class CustomAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     final CartListBloc bloc = BlocProvider.getBloc<CartListBloc>();
     return Container(
-      margin: EdgeInsets.only(bottom: 25),
+      margin: const EdgeInsets.only(bottom: 25),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-          Icon(Icons.menu),
+          const Icon(Icons.menu),
           StreamBuilder(
             stream: bloc.listStream,
             builder: (context, snapshot) {
